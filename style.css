@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --color-primary-1:  hsl(158, 36%, 37%);
+    --color-primary-2: hsl(30, 38%, 92%);
+    --color-neutral-1: hsl(212, 21%, 14%);
+    --color-neutral-2: hsl(228, 12%, 48%);
+    --color-neutral-3: hsl(0, 0%, 100%);
+    --font-size-p: 14px;
+}
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size-p);
+    color: var(--color-neutral-1);
+    background-color: var(--color-primary-2);
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--color-neutral-3);
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.img-desktop{
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+    flex: 1;
+}
+
+.img-mobile {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    flex: 1;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 2rem;
+    flex: 2;
+}
+
+.card-header {
+    text-transform: uppercase;
+    color: var(--color-neutral-2);
+    font-weight: 100;
+    letter-spacing: 5px;
+    font-size: small;
+    text-align: left;
+}
+
+.card-paragraph {
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--color-neutral-2);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Fraunces', serif;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-primary-1);
+    color: var(--color-neutral-3);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: hsl(158, 25%, 35%);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.precio-oferta {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary-1);
+    font-family: 'Fraunces', serif;
+}
+
+.precio-tachado{
+    text-decoration: line-through;
+    color: var(--color-neutral-2);
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card-content {
+        align-items: start;
+        justify-content: center;
+        margin: 2rem;
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+
+    .card-title {
+        font-size: 32px;
+    }
+
+    .card-paragraph {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-paragraph {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 150px;
+    }
+}
+
+
+
