@@ -58,7 +58,6 @@ body {
 .img-mobile {
     display: none;
     width: 100%;
-    max-width: 300px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
     flex: 1;
